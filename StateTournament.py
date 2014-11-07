@@ -1,6 +1,7 @@
 import random
 
-
+CardList = {'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'}
+SuitList = {'C', 'D', 'H', 'S'}
 
 class Bracket(object):
 	def __init__(self):
@@ -20,20 +21,19 @@ class Bracket(object):
 
 
 class deck(object):
-	_cards = 7
-	_players = 2
 	deckList = []
-	playerHands = []
-	cardDictionary = {'A':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10, 'J':11, 'Q':12, 'K':13}
+	representativeList = []
 	#constructor
 	def __init__(self):
-		for y in {'C', 'D', 'H', 'S'}:	
-			for x in {'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'}:
+		for y in SuitList:	
+			for x in CardList:
 				self.deckList.append((x,y))
 
 	#Selection
 	def representativeSelection():
 		#TODO: this function will decide on the cards to represent each team and elaborate on the decision making process.
+		for c in CardList:
+			self.representativeList.append(c)
 		# A list of quips should be randomly selected from in order to keep it a little fresher over several runs
 			#This is a frosting feature
 		pass
