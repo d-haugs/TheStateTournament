@@ -34,6 +34,7 @@ class deck(object):
 		#TODO: this function will decide on the cards to represent each team and elaborate on the decision making process.
 		for c in CardList:
 			self.representativeList.append(c)
+		self.representativeList.shuffle()
 		# A list of quips should be randomly selected from in order to keep it a little fresher over several runs
 			#This is a frosting feature
 		pass
